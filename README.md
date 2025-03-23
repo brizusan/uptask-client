@@ -1,54 +1,68 @@
-# React + TypeScript + Vite
+# UpTask - Cliente
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+UpTask es una aplicación de gestión de proyectos y tareas, diseñada para ayudar a los equipos a organizar su flujo de trabajo de manera eficiente. Este repositorio contiene el cliente desarrollado con React y Tailwind CSS.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologías
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este proyecto utiliza las siguientes tecnologías:
 
-## Expanding the ESLint configuration
+- **Axios**: Cliente HTTP para la comunicación con la API.
+- **React**: Librería para la creación de interfaces de usuario.
+- **React Hook Form**: Manejo de formularios en React.
+- **React Router**: Manejo de rutas en la aplicación.
+- **React Query**: Consultas , Manejo de estado y Caché de datos.
+- **Tailwind CSS**: Framework de estilos para una UI moderna y responsiva.
+- **Vite**: Herramienta de desarrollo rápida para aplicaciones modernas.
+- **ZOD**: Herramienta para validaciones de esquemas de datos.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📦 Instalación
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+1. Clona el repositorio:
+   ```sh
+   git clone https://github.com/brizusan/uptask-client.git
+   ```
+2. Accede al directorio del proyecto:
+   ```sh
+   cd uptask-client
+   ```
+3. Instala las dependencias:
+   ```sh
+   npm install
+   ```
+4. Configura las variables de entorno en un archivo `.env` (si es necesario).
+
+## ▶️ Uso
+
+Para ejecutar el proyecto en modo desarrollo:
+
+```sh
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+El servidor de desarrollo se ejecutará en `http://localhost:5173/` o el puerto configurado.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🛠️ Construcción
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+Para generar una versión optimizada para producción:
+
+```sh
+npm run build
 ```
+
+Los archivos resultantes estarán en la carpeta `dist/`.
+
+## 📌 Características
+
+- Registro e inicio de sesión de usuarios.
+- Creación y administración de proyectos.
+- Asignación y gestión de tareas.
+- Colaboración en proyectos con otros usuarios.
+- Notificaciones en tiempo real.
+
+## 📜 Licencia
+
+Este proyecto está bajo la licencia MIT.
+
+---
+
+Desarrollado por [brizusan](https://github.com/brizusan) 💻✨
